@@ -5,6 +5,10 @@ on:
     tags:
       - "v*"
 
+permissions:
+  id-token: write   # REQUIRED for attest-build-provenance
+  contents: read    # Required for actions/checkout and provenance
+
 jobs:
   build:
     runs-on: ubuntu-latest
